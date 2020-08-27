@@ -1,3 +1,19 @@
+
+
+import Api from "./api.js";
+import Avatar from "./Avatar.js";
+import Card from "./card.js";
+import CardList from "./CardList.js";
+import Form from "./Form.js";
+
+import PopupForm from "./PopupForm.js";
+import PopupImage from "./PopupImage.js";
+
+import UserInfo from "./UserInfo.js";
+import Validation from "./Validation.js";
+
+import '../pages/index.css'
+
 !(function () {
   const root = document.querySelector(".root");
 

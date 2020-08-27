@@ -1,4 +1,4 @@
-class Api {
+export default class Api {
   constructor(group, id) {
     this.group = group;
     this.id = id;
@@ -14,7 +14,7 @@ class Api {
 
   getUser() {
     /* Можно лучше: адрес сервера https://praktikum.tk так же передавать как параметр конструктора */
-    return fetch(`https://praktikum.tk/${this.group}/users/me`, {
+    return fetch(`https://nomoreparties.co/${this.group}/users/me`, {
       headers: {
         authorization: this.id,
       },
@@ -22,7 +22,7 @@ class Api {
   }
 
   studentsCards() {
-    return fetch(`https://praktikum.tk/cohort12/cards`, {
+    return fetch(`https://nomoreparties.co/cohort12/cards`, {
       headers: {
         authorization: this.id,
       },
@@ -30,7 +30,7 @@ class Api {
   }
 
   profile = (profileName, profileAbout) => {
-    return fetch(`https://praktikum.tk/${this.group}/users/me`, {
+    return fetch(`https://nomoreparties.co/${this.group}/users/me`, {
       method: "PATCH",
       headers: {
         authorization: this.id,
@@ -44,7 +44,7 @@ class Api {
   };
 
   cardSubmit = (description, image) => {
-    return fetch(`https://praktikum.tk/${this.group}/cards`, {
+    return fetch(`https://nomoreparties.co/${this.group}/cards`, {
       method: "POST",
       headers: {
         authorization: this.id,
@@ -58,7 +58,7 @@ class Api {
   };
 
   cardDelete = (cardId) => {
-    return fetch(`https://praktikum.tk/${this.group}/cards/${cardId}`, {
+    return fetch(`https://nomoreparties.co/${this.group}/cards/${cardId}`, {
       method: "DELETE",
       headers: {
         authorization: this.id,
@@ -67,7 +67,7 @@ class Api {
   };
 
   likeSubmit = (cardId) => {
-    return fetch(`https://praktikum.tk/${this.group}/cards/like/${cardId}`, {
+    return fetch(`https://nomoreparties.co/${this.group}/cards/like/${cardId}`, {
       method: "PUT",
       headers: {
         authorization: this.id,
@@ -76,7 +76,7 @@ class Api {
   };
 
   likeDeleteSubmit = (cardId) => {
-    return fetch(`https://praktikum.tk/${this.group}/cards/like/${cardId}`, {
+    return fetch(`https://nomoreparties.co/${this.group}/cards/like/${cardId}`, {
       method: "DELETE",
       headers: {
         authorization: this.id,
@@ -85,7 +85,7 @@ class Api {
   };
 
   avatarSubmit = (avatar) => {
-    return fetch(`https://praktikum.tk/${this.group}/users/me/avatar`, {
+    return fetch(`https://nomoreparties.co/${this.group}/users/me/avatar`, {
       method: "PATCH",
       headers: {
         authorization: this.id,

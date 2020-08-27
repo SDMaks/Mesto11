@@ -1,4 +1,4 @@
-class Card {
+export default class Card {
   constructor(imageValue, descriptionValue, likeNumber, api, idCard) {
     this.imageValue = imageValue;
     this.descriptionValue = descriptionValue;
