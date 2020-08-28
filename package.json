@@ -4,7 +4,7 @@
   "description": "An academic project",
   "main": "./src/scripts/index.js",
   "scripts": {
-    "build": "rimraf dist && NODE_ENV=production webpack --mode production",
+    "build": "rimraf dist && cross-env NODE_ENV=production webpack --mode production",
     "dev": "cross-env NODE_ENV=development webpack-dev-server --mode development --open --watch",
     "deploy": "cross-env NODE_ENV=production gh-pages -d dist"
   },
@@ -17,7 +17,7 @@
   "bugs": {
     "url": "https://github.com/SDMaks/Mesto11/issues"
   },
-  "homepage": "https://github.com/SDMaks/Mesto11#readme",
+  "homepage": "https://github.com/SDMaks/Mesto11/",
   "devDependencies": {
     "@babel/cli": "^7.10.5",
     "@babel/core": "^7.11.4",
