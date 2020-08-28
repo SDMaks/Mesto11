@@ -17,6 +17,8 @@ import '../pages/index.css'
 !(function () {
   const root = document.querySelector(".root");
 
+  const serverUrl = NODE_ENV === 'development' ? 'http://nomoreparties.co' : 'https://nomoreparties.co';
+
   const addButton = root.querySelector(".user-info__button"); //выбираем кнопку добавления карточки
 
   const popUpClose = root.querySelector("#close-card"); //переменная кнопки закрытия всплывающего окна
@@ -63,7 +65,7 @@ import '../pages/index.css'
 
   const avatarInput = formAvatar.elements.avatar;
 
-  const api = new Api("cohort12", "ea84dadb-b713-4a58-a54d-32873592b22e");
+  const api = new Api("cohort12", "ea84dadb-b713-4a58-a54d-32873592b22e", serverUrl);
 
   const avatarNew = new Avatar(avatarImage);
 
