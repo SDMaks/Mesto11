@@ -1,4 +1,4 @@
-class CardList {
+export default class CardList {
   constructor(api, createCardFunction) {
     this.api = api;
     this._createCardFunction = createCardFunction;

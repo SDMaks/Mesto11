@@ -6,7 +6,7 @@
 
 */
 
-class Form {
+export default class Form {
   constructor(
     validator,
     template,

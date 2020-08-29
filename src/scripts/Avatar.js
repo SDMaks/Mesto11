@@ -1,4 +1,4 @@
-class Avatar {
+export default class Avatar {
   constructor(avatarImage) {
     this.avatarImage = avatarImage;
   }
